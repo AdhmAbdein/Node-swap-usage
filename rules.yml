@@ -1,0 +1,12 @@
+
+groups:
+  - name: node_swap_usage
+    rules:
+      - record: node_swap_usage_rule
+        expr: (node_memory_SwapTotal_bytes - node_memory_SwapFree_bytes) / node_memory_SwapTotal_bytes * 100
+        labels:
+          node1: node_swap_usage
+
+
+
+

@@ -1,0 +1,11 @@
+groups:
+  - name: node_swap_usage
+    rules:
+      - alert: node_swap_usage_alert
+        expr: node_swap_usage_rule > 50
+        for: 1m
+        annotations:
+          summary: "swap usage in {{ $labels.instance }}"
+          description: "swap usage is {{ $value }}"
+
+
